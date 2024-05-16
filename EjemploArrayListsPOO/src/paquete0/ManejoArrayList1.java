@@ -38,8 +38,7 @@ public class ManejoArrayList1 {
         
         for (int i = 0; i < profesores2.size(); i++) {
             Profesor p1 = profesores2.get(i);
-            System.out.printf("%s - %s\n", p1.obtenerNombre(),
-                    p1.obtenerTipo());
+            System.out.printf("%s - %s\n", p1);
         }
         
         System.out.println("-----------------------------");
@@ -48,8 +47,7 @@ public class ManejoArrayList1 {
         profesores2.add(prof3);
         
         for (int i = 0; i < profesores2.size(); i++) {
-            System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
-                    profesores2.get(i).obtenerTipo());
+            System.out.printf("%s - %s\n", profesores2.get(i));
         }
     }
 }

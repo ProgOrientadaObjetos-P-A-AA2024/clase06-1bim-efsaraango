@@ -34,4 +34,6 @@ public class Profesor {
     public String obtenerTipo() {
         return tipo;
     }
+    
+    
 }

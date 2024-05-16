@@ -50,10 +50,10 @@ public class Ejecutor2 {
             //
             System.out.printf("Ingrese nombre del profesor %d\n", i + 1);
             nombreProfesor = entrada.nextLine();
-            System.out.printf("Ingrese tipo de contrato del profesor %d\n", 
+            System.out.printf("Ingrese tipo de contrato del profesor %d\n",
                     i + 1);
             tipoProfesor = entrada.nextLine();
-            
+
             Profesor p1 = new Profesor(nombreProfesor, tipoProfesor);
             //
             // cal.establecerProfesor(new Profesor("René Elizalde", "contratado 1"));
