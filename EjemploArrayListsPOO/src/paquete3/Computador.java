@@ -15,12 +15,11 @@ public class Computador {
     private Memoria memoria;
     private double costoComputador;
 
-    public Computador(String mar, Procesador p, Memoria m, double c) {
+    public Computador(String mar, Procesador p, Memoria m) {
         marca = mar;
         procesador = p;
         memoria = m;
-        costoComputador = c;
-
+        establecerCostoComputador();
     }
 
     public void estableceMarca(String ma) {
@@ -35,7 +34,7 @@ public class Computador {
         memoria = m;
     }
 
-    public void estableceCostoComputador() {
+    public void establecerCostoComputador() {
         costoComputador = memoria.obtenerCosto() + procesador.obtenerCosto();
     }
 
