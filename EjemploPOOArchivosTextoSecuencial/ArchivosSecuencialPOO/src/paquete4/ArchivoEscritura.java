@@ -1,32 +1,30 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package paquete2;
+package paquete4;
 
-// Uso de la clase Formatter para escribir datos en un archivo de texto.
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Formatter;
+import paquete1.Calificacion;
 
-import paquete1.Profesor;
-
+/**
+ *
+ * @author Det-Pc
+ */
 public class ArchivoEscritura {
-
     private String nombreArchivo;
     private String rutaArchivo;
-    private Profesor registro;
+    private Empresa registro;
     private Formatter salidaArchivo;
-
+    
     public ArchivoEscritura(String n) {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s", nombreArchivo); // "data/profesores2.txt"
                         // ""
     }
-
+    
     public void establecerNombreArchivo(String n) {
         nombreArchivo = n;
     }
@@ -36,7 +34,7 @@ public class ArchivoEscritura {
                 obtenerNombreArchivo());;
     }
 
-    public void establecerRegistro(Profesor n) {
+    public void establecerRegistro(Empresa n) {
         registro = n;
     }
 
@@ -48,7 +46,7 @@ public class ArchivoEscritura {
         return rutaArchivo;
     }
 
-    public Profesor obtenerRegistro() {
+    public Empresa obtenerRegistro() {
         return registro;
     }
 
@@ -56,11 +54,11 @@ public class ArchivoEscritura {
     public void establecerSalida() {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
-            Profesor p = obtenerRegistro();
-            
+            Empresa p = obtenerRegistro();
             String cadenaRegistro = String.format("%s;%s",
-                    p.obtenerNombre(), p.obtenerTipo());
-            
+                    p.obtenerNombre(), p.obtenerCiudad()
+                   
+                    );
             salidaArchivo.format("%s\n", cadenaRegistro);
             salidaArchivo.close();
         } catch (IOException e) {
@@ -77,5 +75,5 @@ public class ArchivoEscritura {
         } // cierra el archivo
 
     }
-
+    
 }

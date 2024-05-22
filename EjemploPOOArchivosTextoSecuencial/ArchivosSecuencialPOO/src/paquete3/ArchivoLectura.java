@@ -79,6 +79,7 @@ public class ArchivoLectura {
                 String profesor = linea_partes.get(2);
 
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
+                        // si queresmos remplazar un caracter distinto de "." o "," necesito el doble "\\"
                         Arrays.asList(profesor.split("\\|")));
                 // ["Tara Hernandez", "contratado"]
                 //        0                 1

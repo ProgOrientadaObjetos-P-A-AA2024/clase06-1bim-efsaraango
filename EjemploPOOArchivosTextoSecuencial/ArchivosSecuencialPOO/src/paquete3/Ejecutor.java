@@ -26,7 +26,8 @@ public class Ejecutor {
         c1.establecerProfesor(profesor1);
         c2.establecerProfesor(profesor2);
         c3.establecerProfesor(profesor3);
-
+        
+        // creo un lista de notas
         Calificacion[] lista = {c1, c2, c3};
 
         ArchivoEscritura archivo = new ArchivoEscritura(nombreArchivo);
